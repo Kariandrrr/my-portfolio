@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const projectEntries = await getCollection('projects');
+  return projectEntries.map((entry: CollectionEntry<'projects'>) => {
+    const currentSlug = entry.slug || entry.id.replace(/\.[^/.]+$/, "");
+
+    return {
+      params: { slug: currentSlug },
+      props: { entry },
+    };
+  });
+}
+
+interface Props {
+  entry: CollectionEntry<'projects'>;
+}
+
+const { slug } = Astro.params;
+const props = Astro.props as any;
+let entry = props.entry;
+
+if (!entry && slug) {
+  entry = await getEntry('projects', slug);
+}
+
+if (!entry) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <div class="flex flex-col p-10 max-w-3xl mx-auto prose prose-invert font-mono text-skin-base">
+    <a href="/" class="text-skin-hue hover:underline mb-6 inline-block font-mono text-sm">
+      ← Назад на главную
+    </a>
+    <h1 class="text-3xl font-bold mb-4 text-skin-base">{entry.data.title}</h1>
+    <Content />
+  </div>
+</Layout>
