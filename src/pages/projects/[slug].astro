@@ -8,8 +8,7 @@ export const prerender = true;
 export async function getStaticPaths() {
   const projectEntries = await getCollection('projects');
   return projectEntries.map((entry: CollectionEntry<'projects'>) => {
-    const currentSlug = entry.slug || entry.id.replace(/\.[^/.]+$/, "");
-
+    const currentSlug = (entry as any).slug || entry.id.replace(/\.[^/.]+$/, "");
     return {
       params: { slug: currentSlug },
       props: { entry },
@@ -33,15 +32,33 @@ if (!entry) {
   return Astro.redirect('/404');
 }
 
-const { Content } = await entry.render();
+const { Content } = await (entry as any).render();
 ---
 
-<Layout title={entry.data.title}>
-  <div class="flex flex-col p-10 max-w-3xl mx-auto prose prose-invert font-mono text-skin-base">
-    <a href="/" class="text-skin-hue hover:underline mb-6 inline-block font-mono text-sm">
-      ← Назад на главную
-    </a>
-    <h1 class="text-3xl font-bold mb-4 text-skin-base">{entry.data.title}</h1>
-    <Content />
+<Layout title={entry.data.title} data-theme="dark">
+  <div class="dark">
+    <main class="min-h-screen bg-skin-fill text-skin-base py-10 px-4 sm:px-6 lg:px-8 font-mono transition-colors duration-300">
+      <div class="max-w-3xl mx-auto flex flex-col">
+
+        <a href="/" class="text-skin-hue hover:underline mb-8 inline-block text-sm font-medium transition-colors">
+          ← Назад на главную
+        </a>
+
+        <h1 class="text-3xl sm:text-4xl font-bold mb-6 text-skin-base border-b border-skin-line pb-4">
+          {entry.data.title}
+        </h1>
+
+        <article class="prose prose-invert max-w-none text-skin-muted leading-relaxed
+          [&>h1]:text-2xl [&>h1]:font-bold [&>h1]:text-skin-base [&>h1]:mt-8 [&>h1]:mb-4
+          [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-skin-base [&>h2]:mt-6 [&>h2]:mb-3
+          [&>h3]:text-lg [&>h3]:font-semibold [&>h3]:text-skin-base [&>h3]:mt-4 [&>h3]:mb-2
+          [&>ul]:list-disc [&>ul]:ml-6 [&>ul]:space-y-2 [&>ul]:mb-4 [&>ul]:text-skin-muted
+          [&>p]:mb-4 [&>a]:text-skin-hue [&>a]:hover:underline
+          [&>code]:text-skin-hue [&>code]:bg-skin-fill-muted [&>code]:px-1.5 [&>code]:py-0.5 [&>code]:rounded [&>code]:text-sm">
+          <Content />
+        </article>
+
+      </div>
+    </main>
   </div>
 </Layout>
