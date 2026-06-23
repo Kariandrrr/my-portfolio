@@ -4,12 +4,37 @@ import CV from "@cv";
 const { summary } = CV.basics;
 
 const words = summary.split(' ');
+
+
+const paragraphs = summary.split('\n');
+const firstParagraphWords = paragraphs[0] ? paragraphs[0].split(' ') : [];
+const secondParagraphWords = paragraphs[1] ? paragraphs[1].split(' ') : [];
 ---
 
 <Section className={Astro.props.className} title="About">
-  <p class="font-mono opacity-75 print:font-sans text-skin-hue font-semibold print:text-skin-base print:font-normal w-full select-none">
-    {words.map((word) => (
-      <span class="w-min sm:hover:bg-skin-button-muted transition-all duration-200 sm:hover:cursor-none">{word}</span> <span> </span>
-    ))}
-  </p>
+  <div class="w-full flex flex-col gap-y-4">
+
+    {firstParagraphWords.length > 0 && (
+      <p class="font-mono opacity-75 print:font-sans text-skin-hue font-semibold print:text-skin-base print:font-normal w-full select-none text-center">
+        {firstParagraphWords.map((word) => (
+          <>
+            <span class="w-min sm:hover:bg-skin-button-muted transition-all duration-200 sm:hover:cursor-none">{word}</span>
+            <span> </span>
+          </>
+        ))}
+      </p>
+    )}
+
+    {secondParagraphWords.length > 0 && (
+      <p class="font-mono opacity-75 print:font-sans text-skin-hue font-semibold print:text-skin-base print:font-normal w-full select-none text-justify">
+        {secondParagraphWords.map((word) => (
+          <>
+            <span class="w-min sm:hover:bg-skin-button-muted transition-all duration-200 sm:hover:cursor-none">{word}</span>
+            <span> </span>
+          </>
+        ))}
+      </p>
+    )}
+
+  </div>
 </Section>
