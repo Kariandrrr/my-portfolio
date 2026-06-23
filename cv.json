@@ -9,7 +9,7 @@
     "image": "/pfp.jpg",
     "email": "suslovakarina32@gmail.com",
     "url": "https://Kariandrrr.github.io/",
-    "summary": "Compiling coffee into clean, scalable architecture. Python Backend Developer focused on building high-performance asynchronous REST APIs, secure authentication schemes, and robust database architectures using FastAPI and PostgreSQL.",
+    "summary": "Compiling coffee into clean, scalable architecture. \nPython Backend Developer focused on building high-performance async REST APIs, secure authentication schemes, and robust database architectures using FastAPI and PostgreSQL.",
     "theme": "platinum",
     "location": {
       "address": "Bryansk",
@@ -33,13 +33,6 @@
         "url": "https://t.me/Karinka_404"
       },
       {
-        "network": "LinkedIn",
-        "icon": "ri:linkedin-box-fill",
-        "color": "#0077B5",
-        "username": "Karina Suslova",
-        "url": "https://linkedin.com/in/suslova-karina-8a36a4418"
-      },
-      {
         "network": "Email",
         "icon": "ri:mail-fill",
         "color": "#D44638",
@@ -54,7 +47,7 @@
       "position": "Software Developer Intern",
       "location_type": "Hybrid",
       "location": "Bryansk, Russia",
-      "url": "https://github.com/Kariandrrr/VETVI",
+      "url": "https://www.linkedin.com/company/kvandotechnologies",
       "startDate": "2026-04-01",
       "endDate": "2026-05-31",
       "summary": "Developed a full-stack family genealogy platform (VETVI) from scratch with interactive family trees, private social feeds, and secure data handling.",
