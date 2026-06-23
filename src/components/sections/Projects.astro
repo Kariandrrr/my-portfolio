@@ -10,6 +10,12 @@ import { projects } from "@cv";
     {
       projects && projects.map(
         ({ url, description, highlights, name, isActive, github, stack }) => {
+          const projectSlug = name.toLowerCase().includes('vetvi')
+            ? 'vetvi'
+            : name.toLowerCase().includes('cms')
+              ? 'cms'
+              : 'schedule';
+
           return (
             <div
               role="contentinfo"
@@ -57,13 +63,23 @@ import { projects } from "@cv";
               <p data-ccursor="noPadding" class='relative z-10 py-3 text-sm text-skin-base'>
                 {description}
               </p>
-              <ul class='z-10 mt-1 text-sm'>
+
+              <ul class='z-10 mt-1 text-sm flex-grow'>
                 {highlights.map((highlight) => {
                   return <li data-ccursor class="w-max">{highlight}</li>;
                 })}
               </ul>
-              
-              <ul class="flex print:hidden flex-wrap gap-2 mt-4" aria-label="Technologies used">
+
+              <div class="relative z-10 mt-4 mb-2 flex">
+                <a
+                  href={`/projects/${projectSlug}`}
+                  class="text-xs text-skin-hue border border-solid border-skin-hue/40 px-3 py-1 rounded hover:bg-skin-hue hover:text-skin-inverted transition-all duration-200"
+                >
+                  More details →
+                </a>
+              </div>
+
+              <ul class="flex print:hidden flex-wrap gap-2 mt-2" aria-label="Technologies used">
                 {stack && Object.entries(stack).map(([label, icon]) => (
                   <li data-ccursor="lift" class="border-skin-hue/60 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs backdrop-blur-sm group/stack">
                     {icon &&
@@ -83,7 +99,7 @@ import { projects } from "@cv";
 </Section>
 <script>
   import { Fancybox } from "@fancyapps/ui";
-  Fancybox.bind('[data-fancybox="projects"]', { hideScrollbar: false });
+  Fancybox.bind('[data-fancybox=\"projects\"]', { hideScrollbar: false });
 </script>
 
 <style>

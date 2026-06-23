@@ -7,6 +7,12 @@ import { Icon } from 'astro-icon/components';
 <Layout title="Projects">
   <ul id="project-list">
     {projects && projects.map(({ url, description, highlights, name, isActive, github, stack}) => {
+      const projectSlug = name.toLowerCase().includes('vetvi')
+        ? 'vetvi'
+        : name.toLowerCase().includes('cms')
+          ? 'cms'
+          : 'schedule';
+
       return (
         <li
           class="mb-6 project-item leading-6 nvim-line"
@@ -29,7 +35,7 @@ import { Icon } from 'astro-icon/components';
             ) : (
               <span class="text-lg text-blue">{name}</span>
             )}
-            
+
             {github && (
               <a
                 href={github}
@@ -43,25 +49,36 @@ import { Icon } from 'astro-icon/components';
               </a>
             )}
           </div>
-            <div>
-              {highlights && highlights.map(
-                (highlight) =>
-                  <span class="text-gray-600">{highlight.slice(3)}. </span> //Slice to remove emojis, remove if you don't use emojis
-              )}
-            </div>
-            <p class="text-gray-500">
-              {description}
-            </p>
-            
-            <ul class="flex print:hidden flex-wrap gap-2 mt-6" aria-label="Technologies used">
-              {stack && Object.entries(stack).map(([label], index) => (
-                <li class=" cursor-default bg-transparent border-nvim-green/60 text-green flex items-center border-solid border rounded-md px-2 py-1 text-xs backdrop-blur-sm">
-                  <span>〔{index}〕</span>
-                  <span>{label}</span>
-                </li>
-              ))}
-            </ul>
-          </li>
+
+          <div>
+            {highlights && highlights.map(
+              (highlight) =>
+                <span class="text-gray-600">{highlight.slice(3)}. </span>
+            )}
+          </div>
+
+          <p class="text-gray-500 mt-1">
+            {description}
+          </p>
+
+          <div class="mt-3 flex">
+            <a
+              href={`/neovim/projects/${projectSlug}`}
+              class="text-xs text-blue border border-solid border-blue/40 px-2 py-0.5 rounded hover:bg-blue hover:text-black transition-all duration-200"
+            >
+              〔 More details 〕
+            </a>
+          </div>
+
+          <ul class="flex print:hidden flex-wrap gap-2 mt-4" aria-label="Technologies used">
+            {stack && Object.entries(stack).map(([label], index) => (
+              <li class="cursor-default bg-transparent border-nvim-green/60 text-green flex items-center border-solid border rounded-md px-2 py-1 text-xs backdrop-blur-sm">
+                <span>〔{index}〕</span>
+                <span>{label}</span>
+              </li>
+            ))}
+          </ul>
+        </li>
       )
     })}
   </ul>
