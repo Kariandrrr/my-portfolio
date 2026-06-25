@@ -53,17 +53,17 @@ const { city, region} = location
       <div class="hidden print:block"><b>Contact: </b>{email}</div>
     </section>
   </div>
-  <div class='flex gap-6 print:hidden'>
+  <div class='flex gap-6 print:hidden w-full'>
         <div
           aria-label="Social media"
-          class="flex group/social flex-wrap justify-evenly sm:h-40 sm:w-40 w-full h-min sm:flex-col rounded-3xl p-4 transition-all rotate-0 bg-skin-muted sm:bg-skin-button-muted   sm:hover:bg-skin-muted"
+          class="flex group/social flex-wrap justify-evenly sm:h-40 w-full h-min rounded-3xl p-4 transition-all rotate-0 bg-skin-muted sm:bg-skin-button-muted sm:hover:bg-skin-muted"
         >
           {
             basics.profiles.map(({network, url, icon, color}) => {
               return (
                 <a
                   data-ccursor
-                  class="flex flex-col sm:basis-1/2 items-center justify-center rounded-md hover:cursor-none"
+                  class="flex flex-col basis-1/4 sm:basis-auto items-center justify-center rounded-md hover:cursor-none p-2"
                   href={url}
                   target="_blank"
                   rel="noreferrer noopener"
@@ -76,12 +76,6 @@ const { city, region} = location
               )
             })
           }
-        </div>
-        <div
-          class="footer-button flex h-40 w-40 flex-col place-items-center rounded-3xl sm:bg-skin-muted p-4 transition-all rotate-0 bg-skin-muted  sm:hover:bg-skin-button-accent text-skin-hue sm:hover:text-skin-inverted max-sm:hidden print:hidden" data-ccursor="lift"
-        >
-          <Icon name='ri:command-fill' class='flex-1 w-1/2'/>
-          <p class="font-mono font-bold text-center">Open options</p>
         </div>
   </div>
 </Section>
