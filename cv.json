@@ -12,7 +12,6 @@
     "summary": "Compiling coffee into clean, scalable architecture. \nPython Backend Developer focused on building high-performance async REST APIs, secure authentication schemes, and robust database architectures using FastAPI and PostgreSQL.",
     "theme": "platinum",
     "location": {
-      "address": "Bryansk",
       "city": "Bryansk",
       "countryCode": "RU",
       "region": "Russia"

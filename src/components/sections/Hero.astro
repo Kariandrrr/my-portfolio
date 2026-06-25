@@ -3,7 +3,7 @@ import { basics } from '@cv'
 import Section from '@/components/Section.astro'
 import { Icon } from 'astro-icon/components'
 const { name, animated_secondary_initial_label, animated_main_label,image, location, email } = basics
-const { city, region, address } = location
+const { city, region} = location
 ---
 
 <Section className={Astro.props.className}>
@@ -48,7 +48,7 @@ const { city, region, address } = location
       </div>
       <div data-ccursor="noPadding" class='flex w-max gap-2 py-1 px-2 text-sm text-skin-muted'>
         <Icon class='print:hidden sm:group-hover:text-skin-hue' name='mdi:world' width={20} height={20} />
-        {address}, {city}, {region}
+        {city}, {region}
       </div>
       <div class="hidden print:block"><b>Contact: </b>{email}</div>
     </section>

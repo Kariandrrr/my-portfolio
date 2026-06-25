@@ -25,7 +25,6 @@ interface Basics {
 }
 
 interface Location {
-  address: string;
   city: string;
   postalCode?: string;
   countryCode: string;

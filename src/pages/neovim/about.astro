@@ -6,7 +6,7 @@ import {Icon} from "astro-icon/components";
 
 
 const { name, label, location, profiles, summary } = basics
-const { city, region, address } = location
+const { city, region} = location
 ---
 
 <Layout title="About">
@@ -22,7 +22,7 @@ const { city, region, address } = location
         <h2 class="text-sm text-green nvim-line">{label}</h2>
         <div class="flex items
         -center gap-2 pt-1 text-sm text-skin-muted nvim-line">
-          {address}, {city}, {region}.
+          {city}, {region}.
         </div>
         
         <div class="mb-2">
