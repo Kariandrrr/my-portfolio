@@ -28,5 +28,7 @@ export default defineConfig({
   ],
   output: 'server',
   adapter: vercel(),
+    site: 'https://Kariandrrr.github.io',
+    base: '/my-portfolio',
   
 });
