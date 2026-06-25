@@ -185,27 +185,6 @@
       "url": "https://github.com/Kariandrrr/VETVI"
     },
     {
-      "name": "Secure CMS",
-      "isActive": false,
-      "description": "Designed and deployed a type-safe Content Management System allowing creators to securely publish, edit, and categorize articles via a robust RESTful API.",
-      "highlights": [
-        "🛠️ Safe endpoints using FastAPI and Pydantic",
-        "📉 Reduced data validation bugs",
-        "🔑 Implemented token-refresh mechanics",
-        "🗄️ Normalized PostgreSQL layout"
-      ],
-      "stack": {
-        "Python": "simple-icons:python",
-        "FastAPI": "simple-icons:fastapi",
-        "SQLAlchemy": "simple-icons:sqlite",
-        "PostgreSQL": "simple-icons:postgresql",
-        "Alembic": "simple-icons:python",
-        "Pydantic v2": "simple-icons:pydantic"
-      },
-      "github": "https://github.com/Kariandrrr/cms_1",
-      "url": "https://github.com/Kariandrrr/cms_1"
-    },
-    {
       "name": "Automatic schedule",
       "isActive": true,
       "description": "Backend data architecture for an automated scheduling system, focused on complex relational schema design, data integrity, and strict time-slot constraints.",
@@ -225,6 +204,27 @@
       },
       "github": "https://github.com/Kariandrrr/raspishno",
       "url": "https://github.com/Kariandrrr/raspishno"
+    },
+    {
+      "name": "Secure CMS",
+      "isActive": false,
+      "description": "Designed and deployed a type-safe Content Management System allowing creators to securely publish, edit, and categorize articles via a robust RESTful API.",
+      "highlights": [
+        "🛠️ Safe endpoints using FastAPI and Pydantic",
+        "📉 Reduced data validation bugs",
+        "🔑 Implemented token-refresh mechanics",
+        "🗄️ Normalized PostgreSQL layout"
+      ],
+      "stack": {
+        "Python": "simple-icons:python",
+        "FastAPI": "simple-icons:fastapi",
+        "SQLAlchemy": "simple-icons:sqlite",
+        "PostgreSQL": "simple-icons:postgresql",
+        "Alembic": "simple-icons:python",
+        "Pydantic v2": "simple-icons:pydantic"
+      },
+      "github": "https://github.com/Kariandrrr/cms_1",
+      "url": "https://github.com/Kariandrrr/cms_1"
     }
   ]
 }
