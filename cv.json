@@ -81,66 +81,81 @@
   ],
   "certificates": [],
   "skills": [
-    {
-      "name": "Python",
-      "icon": "simple-icons:python",
-      "level": "Advanced",
-      "keywords": ["Core", "Asyncio", "Backend"]
-    },
-    {
-      "name": "FastAPI",
-      "icon": "simple-icons:fastapi",
-      "level": "Advanced",
-      "keywords": ["Web Development", "REST API", "Pydantic"]
-    },
-    {
-      "name": "PostgreSQL + SQL",
-      "icon": "simple-icons:postgresql",
-      "level": "Advanced",
-      "keywords": ["Databases", "Relational", "Optimization"]
-    },
-    {
-      "name": "SQLAlchemy 2.0",
-      "icon": "simple-icons:sqlite",
-      "level": "Advanced",
-      "keywords": ["ORM", "Async Database Operations"]
-    },
-    {
-      "name": "Alembic",
-      "icon": "mdi:database-refresh",
-      "level": "Advanced",
-      "keywords": ["Database Migrations", "Schema Evolution"]
-    },
-    {
-      "name": "Redis",
-      "icon": "simple-icons:redis",
-      "level": "Intermediate",
-      "keywords": ["Caching", "Key-Value Storage"]
-    },
-    {
-      "name": "JWT / RS256",
-      "icon": "simple-icons:jsonwebtokens",
-      "level": "Advanced",
-      "keywords": ["Authentication", "Security", "Tokens"]
-    },
-    {
-      "name": "Poetry",
-      "icon": "simple-icons:poetry",
-      "level": "Advanced",
-      "keywords": ["Dependency Management", "Environments"]
-    },
-    {
-      "name": "Pytest",
-      "icon": "simple-icons:pytest",
-      "level": "Intermediate",
-      "keywords": ["Testing", "API Validation"]
-    },
-    {
-      "name": "Git / GitHub",
-      "icon": "mdi:github",
-      "level": "Advanced",
-      "keywords": ["Version Control", "Collaboration"]
-    }
+  {
+    "name": "Python",
+    "icon": "simple-icons:python",
+    "keywords": ["Core", "Asyncio", "Backend"]
+  },
+  {
+    "name": "FastAPI",
+    "icon": "simple-icons:fastapi",
+    "keywords": ["Web Development", "REST API", "Pydantic"]
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "simple-icons:postgresql",
+    "keywords": ["Databases", "Relational", "SQL Optimization"]
+  },
+  {
+    "name": "SQLAlchemy 2.0",
+    "icon": "simple-icons:sqlite",
+    "keywords": ["ORM", "Async Database Operations", "Mixins"]
+  },
+  {
+    "name": "Alembic",
+    "icon": "mdi:database-refresh",
+    "keywords": ["Database Migrations", "Schema Evolution"]
+  },
+  {
+    "name": "JWT RS256",
+    "icon": "simple-icons:jsonwebtokens",
+    "keywords": ["Authentication", "Security", "Tokens"]
+  },
+  {
+    "name": "Poetry",
+    "icon": "simple-icons:poetry",
+    "keywords": ["Dependency Management", "Environments"]
+  },
+  {
+    "name": "Pytest",
+    "icon": "simple-icons:pytest",
+    "keywords": ["Testing", "API Validation", "Automation"]
+  },
+  {
+    "name": "Asynchronous Programming",
+    "icon": "mdi:lightning-bolt",
+    "keywords": ["Asyncio", "Non-blocking I/O", "Concurrency"]
+  },
+  {
+    "name": "RESTful API Design",
+    "icon": "mdi:api",
+    "keywords": ["HTTP Methods", "Status Codes", "OpenAPI", "Swagger"]
+  },
+  {
+    "name": "Database Architecture & Normalization",
+    "icon": "mdi:database-edit",
+    "keywords": ["Data Modeling", "M:M Relationships", "Constraints"]
+  },
+  {
+    "name": "Query Optimization & Indexing",
+    "icon": "mdi:database-search",
+    "keywords": ["Compound Indexes", "Query Plans", "Index Scan"]
+  },
+  {
+    "name": "Pydantic Validation",
+    "icon": "simple-icons:pydantic",
+    "keywords": ["Schema Mapping", "Model Validators", "Data Integrity"]
+  },
+  {
+    "name": "Secure Session Management",
+    "icon": "mdi:cookie-lock",
+    "keywords": ["HttpOnly Cookies", "XSS Prevention", "SameSite"]
+  },
+  {
+    "name": "Role-Based Access Control (RBAC)",
+    "icon": "mdi:shield-account",
+    "keywords": ["Authorization", "Permissions", "Dependencies"]
+  }
   ],
   "languages": [
     {
@@ -172,13 +187,14 @@
         "🔧 Safe database schema migrations"
       ],
       "stack": {
+        "Python": "simple-icons:python",
         "FastAPI": "simple-icons:fastapi",
         "SQLAlchemy 2.0": "simple-icons:sqlite",
+        "Alembic": "mdi:database-refresh",
         "PostgreSQL": "simple-icons:postgresql",
-        "Alembic": "simple-icons:python",
-        "Pydantic v2": "simple-icons:pydantic",
-        "React": "simple-icons:react",
-        "TypeScript": "simple-icons:typescript"
+        "Poetry": "simple-icons:poetry",
+        "Pytest": "simple-icons:pytest",
+        "JWT RS256": "simple-icons:jsonwebtokens"
       },
       "github": "https://github.com/Kariandrrr/VETVI",
       "url": "https://github.com/Kariandrrr/VETVI"
