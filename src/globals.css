@@ -217,7 +217,7 @@
   }
 
   body {
-    @apply bg-nvim-bg text-nvim-fg font-mono select-none;
+    @apply bg-nvim-bg text-nvim-fg font-mono;
 
     .c-cursor {
       position: fixed;

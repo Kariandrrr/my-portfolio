@@ -85,7 +85,7 @@ const millisecondsInYear = 1000 * 60 * 60 * 24 * 365
 
                 <ul class="flex print:hidden flex-wrap gap-2" aria-label="Technologies used">
                   {skills && Object.entries(skills).map(([label, icon]) =>  (
-                      <li data-ccursor="lift" class="bg-skin-button-accent/20 border-skin-hue/20 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs backdrop-blur-sm select-none">
+                      <li data-ccursor="lift" class="bg-skin-button-accent/20 border-skin-hue/20 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs backdrop-blur-sm">
                         {icon && <Icon name={icon} width={16} height={16} />} <span>{label}</span>
                       </li>
                     )
