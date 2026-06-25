@@ -163,19 +163,21 @@
   ],
   "projects": [
     {
-      "name": "VETVI (Genealogy Platform)",
+      "name": "VETVI (Genealogy platform)",
       "isActive": true,
       "description": "Full-stack family genealogy platform built from scratch with interactive family trees, a private social feed, and strict profile data protection.",
       "highlights": [
-        "⚡ Asynchronous API handling 50+ concurrent requests smoothly",
-        "🛡️ RS256 private/public key JWT encryption for 100% user privacy",
-        "📦 Developed in a modern monorepo layout combining FastAPI and React+TS",
-        "🔧 Safe database schema migrations using Alembic layers"
+        "⚡ Asynchronous API",
+        "🛡️ RS256 private/public key JWT encryption",
+        "📦 Developed in a modern monorepo layout",
+        "🔧 Safe database schema migrations"
       ],
       "stack": {
         "FastAPI": "simple-icons:fastapi",
         "SQLAlchemy 2.0": "simple-icons:sqlite",
         "PostgreSQL": "simple-icons:postgresql",
+        "Alembic": "simple-icons:python",
+        "Pydantic v2": "simple-icons:pydantic",
         "React": "simple-icons:react",
         "TypeScript": "simple-icons:typescript"
       },
@@ -183,23 +185,46 @@
       "url": "https://github.com/Kariandrrr/VETVI"
     },
     {
-      "name": "Secure CMS Engine",
-      "isActive": true,
+      "name": "Secure CMS",
+      "isActive": false,
       "description": "Designed and deployed a type-safe Content Management System allowing creators to securely publish, edit, and categorize articles via a robust RESTful API.",
       "highlights": [
-        "🛠️ Built 15+ type-safe endpoints using FastAPI and Pydantic schemas",
-        "📉 Reduced data validation bugs by 40% compared to traditional Flask code",
-        "🔑 Implemented token-refresh mechanics to completely block unauthorized actions",
-        "🗄️ Normalized PostgreSQL layout with clean relational query paths"
+        "🛠️ Safe endpoints using FastAPI and Pydantic",
+        "📉 Reduced data validation bugs",
+        "🔑 Implemented token-refresh mechanics",
+        "🗄️ Normalized PostgreSQL layout"
       ],
       "stack": {
         "Python": "simple-icons:python",
         "FastAPI": "simple-icons:fastapi",
         "SQLAlchemy": "simple-icons:sqlite",
-        "PostgreSQL": "simple-icons:postgresql"
+        "PostgreSQL": "simple-icons:postgresql",
+        "Alembic": "simple-icons:python",
+        "Pydantic v2": "simple-icons:pydantic"
       },
       "github": "https://github.com/Kariandrrr/cms_1",
       "url": "https://github.com/Kariandrrr/cms_1"
+    },
+    {
+      "name": "Automatic schedule",
+      "isActive": true,
+      "description": "Backend data architecture for an automated scheduling system, focused on complex relational schema design, data integrity, and strict time-slot constraints.",
+      "highlights": [
+        "📐 PostgreSQL schema with M:M relationships",
+        "🛡️ Comprehensive constraints and indexes",
+        "📦 Declarative SQLAlchemy 2.0 models",
+        "🗺️ Detailed ER-diagrams mapping domain entities"
+],
+      "stack": {
+        "FastAPI": "simple-icons:fastapi",
+        "PostgreSQL": "simple-icons:postgresql",
+        "SQLAlchemy 2.0": "simple-icons:sqlite",
+        "Alembic": "simple-icons:python",
+        "Pydantic v2": "simple-icons:pydantic",
+        "Docker": "simple-icons:docker"
+      },
+      "github": "https://github.com/Kariandrrr/raspishno",
+      "url": "https://github.com/Kariandrrr/raspishno"
     }
   ]
 }
