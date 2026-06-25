@@ -53,7 +53,6 @@ type DateStr = `${string}-${string}-${string}`;
 interface Skill {
   icon: string,
   name: string;
-  level: string;
   keywords: Array<string>;
 }
 
