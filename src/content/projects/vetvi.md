@@ -11,6 +11,7 @@ The system handles the entire family lifecycle: creating family groups, managing
 ### 1. Business requirements analysis
 
 Before writing any code, I spent time understanding the core entities and their relationships. The system needed to handle:
+
 ├── FamilyGroup (family units)\
 ├── User (registered accounts)\
 ├── FamilyMember (individuals in a tree)\
@@ -125,10 +126,10 @@ This approach prevents common issues like accidental data loss while still allow
 
 For each database model, I've created at least four Pydantic schemas:
 
-    Base Schema: Contains the business fields that are common across all operations. This is where validation rules live — min/max lengths, regex patterns, numeric ranges, and cross-field validations.
-    Create Schema: Inherits from Base and adds foreign key fields. This is what clients send when creating a new record. It never contains audit fields like created_at or created_by — those are set by the server.
-    Response Schema: Inherits from Base and adds id plus any audit fields. This is what clients receive when querying data. It has from_attributes = True configured, which allows Pydantic to convert SQLAlchemy objects directly.
-    Update Schema: Standalone, with all fields optional. Clients can send partial updates (PATCH requests) without having to include all fields.
+    Base Schema: contains the business fields that are common across all operations. This is where validation rules live — min/max lengths, regex patterns, numeric ranges, and cross-field validations.
+    Create Schema: inherits from Base and adds foreign key fields. This is what clients send when creating a new record. It never contains audit fields like created_at or created_by — those are set by the server.
+    Response Schema: inherits from Base and adds id plus any audit fields. This is what clients receive when querying data. It has from_attributes = True configured, which allows Pydantic to convert SQLAlchemy objects directly.
+    Update Schema: standalone, with all fields optional. Clients can send partial updates (PATCH requests) without having to include all fields.
 
 The example of schema for family group: 
 ```python
@@ -370,7 +371,7 @@ I was trusting the frontend to send the right family_id. I was assuming that if 
 I moved permission checks into the service layer. Every service method now validates that the user has the right role in the specific family they're trying to modify. This ensures that even if the API is called directly (bypassing the router), permissions are still enforced.
 
 ### 8. Conclusion 
-Building VETVI was a journey from a naive "I know SQL and Python" mindset to a more mature "I know what I don't know" understanding of backend development. The project taught me that great architecture is not about getting everything right the first time—it's about recognizing mistakes early and refactoring with confidence.
+Building VETVI was a journey from a naive "I know SQL and Python" mindset to a more mature "I know what I don't know" understanding of backend development. The project taught me that great architecture is not about getting everything right the first time — it's about recognizing mistakes early and refactoring with confidence.
 
 Looking back, the most valuable lessons came not from the parts that worked perfectly, but from the parts that broke. The normalization trap taught me that theoretical purity isn't always practical. The identity crisis taught me that real-world data doesn't always fit into neat, normalized tables. The relationship complexity taught me that even seemingly simple features can hide enormous complexity if you don't think carefully about the domain.
 

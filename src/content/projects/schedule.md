@@ -10,7 +10,8 @@ The system handles the entire academic cycle: student groups, course scheduling,
 I'm not presenting a finished product here. What I want to share is the design process behind building a production-ready database from scratch — the decisions I made, the mistakes I caught, and the lessons I learned while architecting the data layer. This is the foundation everything else will be built on.
 ### 1. Business requirements analysis 
 
-Before writing any code, I spent time understanding the core entities and their relationships. The system needed to handle:\
+Before writing any code, I spent time understanding the core entities and their relationships. The system needed to handle:
+
 ├── Speciality (academic programs)\
 ├── Subject (courses)\
 ├── Teacher (instructors)\
@@ -181,12 +182,12 @@ Indexes are not free — they speed up reads but slow down writes and consume di
     Frequently searched columns get indexes. The class_date field is queried constantly (checking schedules for a date), so it has an index.\
     Compound indexes for multi-condition queries. The most common queries filter by teacher_id AND class_date or group_id AND class_date. A single column index on teacher_id isn't enough because PostgreSQL would still need to scan all rows for that teacher to find matching dates.\
 ##### 6.2. The performance difference
-While PostgreSQL can combine single-column indexes using a bitmap index scan, a dedicated compound index on (teacher_id, class_date) eliminates the overhead of merging bitmaps and allows the planner to execute a lightning-fast Index Scan directly.\
+While PostgreSQL can combine single-column indexes using a bitmap index scan, a dedicated compound index on (teacher_id, class_date) eliminates the overhead of merging bitmaps and allows the planner to execute a lightning-fast Index Scan directly.
 ##### 6.3. What not to index
 I deliberately avoided indexing columns with low cardinality (few unique values), like activity_type which has only 4 possible values (lecture, seminar, practical_work, laboratory_work). An index on such a column would rarely be used by the query planner.
 
 ### 7. My pitfalls and solutions
-I had built APIs before. I understood SQL, I could write Python, I'd even used SQLAlchemy in a few small projects. But this university management system was different. It was my first real attempt at building something complex from scratch—something with multiple interconnected tables, business rules, and real-world constraints.\
+I had built APIs before. I understood SQL, I could write Python, I'd even used SQLAlchemy in a few small projects. But this university management system was different. It was my first real attempt at building something complex from scratch — something with multiple interconnected tables, business rules, and real-world constraints.\
 And honestly? I made a lot of mistakes. Not because I'm careless, but because I didn't know what I didn't know. Here's what that looked like.
 
 #### Lesson one: normalisation is a trap if you go too far 
@@ -194,7 +195,7 @@ When I started designing the database, I was obsessed with normalization. I had 
 
 Then I realized what I'd actually done. I introduced a join table for four values that would never change. Every time I fetched a schedule item, I had to join this tiny table. For a small database, it didn't matter. But I thought about what happens when you have ten thousand schedule items and you're rendering a calendar view for a user.
 
-I was adding complexity for zero benefit. The database was slower, my queries were more complicated, and the only thing I got in return was... a separate table for four values.\
+I was adding complexity for zero benefit. The database was slower, my queries were more complicated, and the only thing I got in return was... a separate table for four values.
 
 My solution was to use a PostgreSQL ENUM. The database still rejects invalid values, but it's stored like a string (actually an integer under the hood) and doesn't require a join. It's faster, simpler, and more readable.
 
