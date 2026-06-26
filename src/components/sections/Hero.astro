@@ -22,7 +22,7 @@ const { city, region} = location
             class='scale-110 sm:grayscale sm:scale-100 transition-all sm:group-hover:scale-110 sm:group-hover:grayscale-0'
             height={600}
             width={600}
-            src={image}
+            src={image.startsWith('http') ? image : `/my-portfolio${image}`}
             alt={`Profile of ${name}`}
             loading='eager' />
         </figure>

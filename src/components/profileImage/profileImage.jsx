@@ -19,7 +19,7 @@ function ProfileImage() {
   };
 
   const [config, setConfig] = useState({
-    imageSrc: '/pfp.jpeg',
+    imageSrc: '/my-portfolio/pfp.jpeg',
     particleGap: 3,
     mouseForce: 100,
     gravity: 0.1,
