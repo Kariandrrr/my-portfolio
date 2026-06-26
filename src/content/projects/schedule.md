@@ -218,3 +218,12 @@ Then I made a query that filtered by teacher_id and class_date. It scanned the w
 I had indexed each column separately, but not together. While modern PostgreSQL can combine multiple single-column indexes using a Bitmap Index Scan, doing so introduces a noticeable overhead for merging the bitmaps.
 
 To solve this, I created a dedicated compound index on (teacher_id, class_date). This completely changed the execution plan: the query planner switched to a direct, lightning-fast Index Scan, executing the query over 50 times faster.
+
+### 7. Conclusion 
+This project taught me that building a database isn't just about writing SQL or defining ORM models — it's about thinking in terms of data flow. The relationships between entities, the constraints that protect integrity, the indexes that make queries fast—every decision ripples through the entire system.
+
+The first is that design must always come before code. I made mistakes early on that I could have avoided if I'd spent more time with pen and paper, drawing the relationships, tracing the data paths, questioning every assumption. Code, I realized, is just the implementation of decisions you've already made. If the decisions are wrong, no amount of clean code will fix them.
+
+The third is that duplication is always a design smell. If you're storing the same data twice, you're creating future problems. Moving the relationship up one level—like linking practices to semesters instead of groups — solves the problem at the design level, not the code level. It took me a while to see this, but once I did, the whole system became cleaner.
+
+The architecture I built isn't perfect. No architecture is. But it's thoughtful—every table, every constraint, every index has a reason. And that's what makes the difference between a database that survives production and one that doesn't.
