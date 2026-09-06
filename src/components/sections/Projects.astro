@@ -9,19 +9,19 @@ import { projects } from "@cv";
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
     {
       projects && projects.map(
-         ({ url, description, highlights, name, isActive, github, stack }) => {
-           const slugMap: Record<string, string> = {
-             'VETVI (Genealogy platform)': 'vetvi',
-             'Olist E-Commerce Analytics & SQL Query Optimization': 'olist-e-commerce',
-             'Automatic schedule': 'schedule',
-           };
+        ({ url, description, highlights, name, isActive, github, stack }) => {
+          const slugMap: Record<string, string> = {
+            'VETVI (Genealogy platform)': 'vetvi',
+            'Olist E-Commerce Analytics & SQL Query Optimization': 'olist-e-commerce',
+            'Automatic schedule': 'schedule',
+          };
 
-           const projectSlug = slugMap[name] || name
-             .toLowerCase()
-             .replace(/[^a-z0-9\s-]/g, '')
-             .replace(/\s+/g, '-')
-             .replace(/-+/g, '-')
-             .replace(/^-|-$/g, '');
+          const projectSlug = slugMap[name] || name
+            .toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-')
+            .replace(/^-|-$/g, '');
 
           return (
             <div
@@ -104,9 +104,10 @@ import { projects } from "@cv";
     }
   </div>
 </Section>
+
 <script>
   import { Fancybox } from "@fancyapps/ui";
-  Fancybox.bind('[data-fancybox=\"projects\"]', { hideScrollbar: false });
+  Fancybox.bind('[data-fancybox="projects"]', { hideScrollbar: false });
 </script>
 
 <style>
