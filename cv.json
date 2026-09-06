@@ -8,7 +8,7 @@
     "image": "/pfp.jpg",
     "email": "suslovakarina32@gmail.com",
     "url": "https://Kariandrrr.github.io/",
-    "summary": "Compiling coffee into clean, scalable architecture. \n\"Python Developer transitioning into Data Engineering. Building async REST APIs with FastAPI and PostgreSQL, while learning data pipeline development, ETL processes, and analytical database design. Passionate about clean code and working with data at scale.",
+    "summary": "Compiling coffee into clean, scalable architecture. \nPython Developer transitioning into Data Engineering. Building async REST APIs with FastAPI and PostgreSQL, while learning data pipeline development, ETL processes, and analytical database design. Passionate about clean code and working with data at scale.",
     "theme": "platinum",
     "location": {
       "city": "Bryansk",
@@ -92,7 +92,6 @@
     },
     {
       "name": "ETL/ELT Pipeline Development",
-      "icon": "mdi:pipe-line",
       "keywords": ["Data Extraction", "Transformation", "Loading", "Batch Processing", "Lazy Evaluation"]
     },
     {
@@ -220,9 +219,9 @@
       "isActive": true,
       "description": "Data engineering project based on the Olist Brazilian E-Commerce dataset, focused on relational data modeling, query refactoring, and performance tuning for analytical workloads.",
       "highlights": [
-        "📊 Analytical SQL query optimization & EXPLAIN ANALYZE profiling",
-        "🏗️ Relational schema design, PK/FK constraints & strategic indexing",
-        "⚡ Data transformation & aggregation performance improvements"
+        "📊 Analytical SQL query optimization",
+        "🏗️ Relational schema design, PK/FK constraints",
+        "⚡ Aggregation performance improvements"
       ],
       "stack": {
         "SQL": "simple-icons:sqlite",
