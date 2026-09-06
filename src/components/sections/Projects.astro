@@ -1,7 +1,6 @@
 ---
 import Section from "../Section.astro";
 import { Icon } from "astro-icon/components";
-
 import { projects } from "@cv";
 ---
 
@@ -28,9 +27,7 @@ import { projects } from "@cv";
               role="contentinfo"
               class="grid-span-1 group relative flex min-h-80 flex-col overflow-hidden rounded-md bg-skin-button-muted/50 p-5 shadow-sm ring-1 ring-skin-muted sm:hover:ring-2 sm:hover:ring-skin-hue sm:hover:bg-skin-muted transition-all duration-250 ease-in-out"
             >
-              <div
-                class='relative z-10 flex items-center justify-between space-x-[10px]'
-              >
+              <div class="relative z-10 flex items-center justify-between space-x-[10px]">
                 <div class="flex items-center gap-2">
                   <Icon data-ccursor="lift" name="mdi:folder-outline" class="size-4" />
                   <div class="flex items-center gap-[6px]">
@@ -67,14 +64,14 @@ import { projects } from "@cv";
                 )}
               </div>
 
-              <p data-ccursor="noPadding" class='relative z-10 py-3 text-sm text-skin-base'>
+              <p data-ccursor="noPadding" class="relative z-10 py-3 text-sm text-skin-base">
                 {description}
               </p>
 
-              <ul class='z-10 mt-1 text-sm flex-grow'>
-                {highlights.map((highlight) => {
-                  return <li data-ccursor class="w-max">{highlight}</li>;
-                })}
+              <ul class="z-10 mt-1 text-sm flex-grow">
+                {highlights.map((highlight) => (
+                  <li data-ccursor class="w-max">{highlight}</li>
+                ))}
               </ul>
 
               <div class="relative z-10 mt-4 mb-2 flex">
@@ -88,18 +85,22 @@ import { projects } from "@cv";
 
               <ul class="flex print:hidden flex-wrap gap-2 mt-2" aria-label="Technologies used">
                 {stack && Object.entries(stack).map(([label, icon]) => (
-                  <li data-ccursor="lift" class="border-skin-hue/60 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs backdrop-blur-sm group/stack">
-                    {icon &&
+                  <li
+                    data-ccursor="lift"
+                    class="border-skin-hue/60 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs backdrop-blur-sm group/stack"
+                  >
+                    {icon && (
                       <span class="flex gap-1">
-                      <Icon name={icon} width={16} height={16} /> <span class="group-hover/stack:text-skin-hue transition-all duration-200">{label}</span>
+                        <Icon name={icon} width={16} height={16} />
+                        <span class="group-hover/stack:text-skin-hue transition-all duration-200">{label}</span>
                       </span>
-                    }
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
           );
-        },
+        }
       )
     }
   </div>
@@ -113,9 +114,9 @@ import { projects } from "@cv";
 <style>
   ul {
     @apply ml-4 list-disc space-y-1;
-    li {
-      @apply text-skin-muted marker:text-skin-hue;
-    }
+  }
+  ul li {
+    @apply text-skin-muted marker:text-skin-hue;
   }
 
   footer {
