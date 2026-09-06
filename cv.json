@@ -2,9 +2,8 @@
   "analyticsCode": "",
   "basics": {
     "name": "Karina Suslova",
-    "label": "Backend Developer",
-    "animated_main_label": "backend_developer",
-    "animated_secondary_initial_label": "python",
+    "label": "Backend Developer / Data Engineer",
+    "animated_main_label": "backend_developer / data_engineer",
     "animated_secondary_final_label": "fastapi",
     "image": "/pfp.jpg",
     "email": "suslovakarina32@gmail.com",
@@ -81,81 +80,121 @@
   ],
   "certificates": [],
   "skills": [
-  {
-    "name": "Python",
-    "icon": "simple-icons:python",
-    "keywords": ["Core", "Asyncio", "Backend"]
-  },
-  {
-    "name": "FastAPI",
-    "icon": "simple-icons:fastapi",
-    "keywords": ["Web Development", "REST API", "Pydantic"]
-  },
-  {
-    "name": "PostgreSQL",
-    "icon": "simple-icons:postgresql",
-    "keywords": ["Databases", "Relational", "SQL Optimization"]
-  },
-  {
-    "name": "SQLAlchemy 2.0",
-    "icon": "simple-icons:sqlite",
-    "keywords": ["ORM", "Async Database Operations", "Mixins"]
-  },
-  {
-    "name": "Alembic",
-    "icon": "mdi:database-refresh",
-    "keywords": ["Database Migrations", "Schema Evolution"]
-  },
-  {
-    "name": "JWT RS256",
-    "icon": "simple-icons:jsonwebtokens",
-    "keywords": ["Authentication", "Security", "Tokens"]
-  },
-  {
-    "name": "Poetry",
-    "icon": "simple-icons:poetry",
-    "keywords": ["Dependency Management", "Environments"]
-  },
-  {
-    "name": "Pytest",
-    "icon": "simple-icons:pytest",
-    "keywords": ["Testing", "API Validation", "Automation"]
-  },
-  {
-    "name": "Asynchronous Programming",
-    "icon": "mdi:lightning-bolt",
-    "keywords": ["Asyncio", "Non-blocking I/O", "Concurrency"]
-  },
-  {
-    "name": "RESTful API Design",
-    "icon": "mdi:api",
-    "keywords": ["HTTP Methods", "Status Codes", "OpenAPI", "Swagger"]
-  },
-  {
-    "name": "Database Architecture & Normalization",
-    "icon": "mdi:database-edit",
-    "keywords": ["Data Modeling", "M:M Relationships", "Constraints"]
-  },
-  {
-    "name": "Query Optimization & Indexing",
-    "icon": "mdi:database-search",
-    "keywords": ["Compound Indexes", "Query Plans", "Index Scan"]
-  },
-  {
-    "name": "Pydantic Validation",
-    "icon": "simple-icons:pydantic",
-    "keywords": ["Schema Mapping", "Model Validators", "Data Integrity"]
-  },
-  {
-    "name": "Secure Session Management",
-    "icon": "mdi:cookie-lock",
-    "keywords": ["HttpOnly Cookies", "XSS Prevention", "SameSite"]
-  },
-  {
-    "name": "Role-Based Access Control (RBAC)",
-    "icon": "mdi:shield-account",
-    "keywords": ["Authorization", "Permissions", "Dependencies"]
-  }
+    {
+      "name": "Python",
+      "icon": "simple-icons:python",
+      "keywords": ["Core", "Asyncio", "Backend", "ETL Scripting", "Data Processing"]
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "simple-icons:postgresql",
+      "keywords": ["Databases", "Relational", "SQL Optimization", "Window Functions", "CTE", "EXPLAIN ANALYZE"]
+    },
+    {
+      "name": "ETL/ELT Pipeline Development",
+      "icon": "mdi:pipe-line",
+      "keywords": ["Data Extraction", "Transformation", "Loading", "Batch Processing", "Lazy Evaluation"]
+    },
+    {
+      "name": "Apache Airflow",
+      "icon": "simple-icons:apacheairflow",
+      "keywords": ["Orchestration", "DAGs", "Schedulers", "Sensors", "Workflow Automation"]
+    },
+    {
+      "name": "Query Optimization & Indexing",
+      "icon": "mdi:database-search",
+      "keywords": ["Compound Indexes", "Query Plans", "Index Scan", "work_mem Tuning", "CTE Pre-aggregation"]
+    },
+    {
+      "name": "Data Pipeline Performance Tuning",
+      "icon": "mdi:gauge",
+      "keywords": ["Memory Optimization", "O(1) Streaming", "Batch Processing", "I/O Optimization"]
+    },
+    {
+      "name": "Object Storage (S3 / Yandex Object Storage)",
+      "icon": "simple-icons:amazons3",
+      "keywords": ["Cloud Storage", "Bucket Management", "API Integration", "Data Lake"]
+    },
+    {
+      "name": "SQLAlchemy 2.0",
+      "icon": "simple-icons:sqlite",
+      "keywords": ["ORM", "Async Database Operations", "Mixins"]
+    },
+    {
+      "name": "Alembic",
+      "icon": "mdi:database-refresh",
+      "keywords": ["Database Migrations", "Schema Evolution", "Autogenerate", "Custom Revisions"]
+    },
+    {
+      "name": "FastAPI",
+      "icon": "simple-icons:fastapi",
+      "keywords": ["Web Development", "REST API", "Pydantic", "Dependency Injection"]
+    },
+    {
+      "name": "PySpark",
+      "icon": "simple-icons:apachespark",
+      "keywords": ["Distributed Computing", "Big Data", "DataFrames", "Familiarity"]
+    },
+    {
+      "name": "JWT RS256",
+      "icon": "simple-icons:jsonwebtokens",
+      "keywords": ["Authentication", "Security", "Tokens"]
+    },
+    {
+      "name": "Poetry",
+      "icon": "simple-icons:poetry",
+      "keywords": ["Dependency Management", "Environments"]
+    },
+    {
+      "name": "Pytest",
+      "icon": "simple-icons:pytest",
+      "keywords": ["Testing", "API Validation", "Automation"]
+    },
+    {
+      "name": "Asynchronous Programming",
+      "icon": "mdi:lightning-bolt",
+      "keywords": ["Asyncio", "Non-blocking I/O", "Concurrency", "asyncpg"]
+    },
+    {
+      "name": "RESTful API Design",
+      "icon": "mdi:api",
+      "keywords": ["HTTP Methods", "Status Codes", "OpenAPI", "Swagger"]
+    },
+    {
+      "name": "Database Architecture & Normalization",
+      "icon": "mdi:database-edit",
+      "keywords": ["Data Modeling", "M:M Relationships", "Constraints", "Tree-like Structures"]
+    },
+    {
+      "name": "Pydantic Validation",
+      "icon": "simple-icons:pydantic",
+      "keywords": ["Schema Mapping", "Model Validators", "Data Integrity"]
+    },
+    {
+      "name": "Docker",
+      "icon": "simple-icons:docker",
+      "keywords": ["Containerization", "Multi-container Setup", "Isolated Environments"]
+    },
+    {
+      "name": "Git / GitHub",
+      "icon": "simple-icons:git",
+      "keywords": ["Version Control", "Code Review", "Collaboration"]
+    },
+    {
+      "name": "Bash Scripting",
+      "icon": "simple-icons:gnubash",
+      "keywords": ["Automation", "Shell Commands", "Migration Automation"]
+    },
+    {
+      "name": "Secure Session Management",
+      "icon": "mdi:cookie-lock",
+      "keywords": ["HttpOnly Cookies", "XSS Prevention", "SameSite"]
+    },
+    {
+      "name": "Role-Based Access Control (RBAC)",
+      "icon": "mdi:shield-account",
+      "keywords": ["Authorization", "Permissions", "Dependencies"]
+    }
   ],
   "languages": [
     {
@@ -177,8 +216,27 @@
   ],
   "projects": [
     {
-      "name": "VETVI (Genealogy platform)",
+      "name": "Olist E-Commerce Analytics & SQL Query Optimization",
       "isActive": true,
+      "description": "Data engineering project based on the Olist Brazilian E-Commerce dataset, focused on relational data modeling, query refactoring, and performance tuning for analytical workloads.",
+      "highlights": [
+        "📊 Analytical SQL query optimization & EXPLAIN ANALYZE profiling",
+        "🏗️ Relational schema design, PK/FK constraints & strategic indexing",
+        "⚡ Data transformation & aggregation performance improvements"
+      ],
+      "stack": {
+        "SQL": "simple-icons:sqlite",
+        "PostgreSQL": "simple-icons:postgresql",
+        "Docker": "simple-icons:docker",
+        "Python": "simple-icons:python",
+        "Git": "simple-icons:git"
+      },
+      "github": "https://github.com/Kariandrrr/olist-sql-refactoring",
+      "url": "https://github.com/Kariandrrr/olist-sql-refactoring"
+    },
+    {
+      "name": "VETVI (Genealogy platform)",
+      "isActive": false,
       "description": "Full-stack family genealogy platform built from scratch with interactive family trees, a private social feed, and strict profile data protection.",
       "highlights": [
         "⚡ Asynchronous API",
@@ -201,7 +259,7 @@
     },
     {
       "name": "Automatic schedule",
-      "isActive": true,
+      "isActive": false,
       "description": "Backend data architecture for an automated scheduling system, focused on complex relational schema design, data integrity, and strict time-slot constraints.",
       "highlights": [
         "📐 PostgreSQL schema with M:M relationships",
