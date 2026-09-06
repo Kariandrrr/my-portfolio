@@ -10,13 +10,10 @@ import { projects } from "@cv";
     {
       projects && projects.map(
         ({ url, description, highlights, name, isActive, github, stack }) => {
-          const projectSlug = name.toLowerCase().includes('vetvi')
-            ? 'vetvi'
-            : name.toLowerCase().includes('cms')
-              ? 'cms'
-              : name.toLowerCase().includes('olist-e-commerce')
-              ? 'olist-e-commerce'
-              : 'schedule';
+          const projectSlug = name
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^a-z0-9-]/g, '');
 
           return (
             <div
