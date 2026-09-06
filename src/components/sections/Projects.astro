@@ -10,7 +10,7 @@ import { projects } from "@cv";
     {
       projects && projects.map(
          ({ url, description, highlights, name, isActive, github, stack }) => {
-           const slugMap = {
+           const slugMap: Record<string, string> = {
              'VETVI (Genealogy platform)': 'vetvi',
              'Olist E-Commerce Analytics & SQL Query Optimization': 'olist-e-commerce',
              'Automatic schedule': 'schedule',
